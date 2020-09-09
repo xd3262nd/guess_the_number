@@ -48,6 +48,17 @@ def main():
         except:
             print('An exception occured!')
             break
+    
+    play_again = input("Would you like to play again? (enter y for yes or n for no) ")
+
+    while play_again.lower() not in { 'y' , 'n' }:
+        play_again = input("Would you like to play again? (enter y for yes or n for no) ")
+
+    if play_again.lower() == "y":
+        main()
+        
+    else:
+        print("Thanks for playing! Bye bye!")
 
 
 if __name__ == '__main__':
